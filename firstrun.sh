@@ -3,15 +3,17 @@
 cd /config
 
 if [ ! -d "/config/plexrequests-meteor" ]; then
+  echo "First install detected, cloning repository"
   git clone https://github.com/lokenx/plexrequests-meteor.git
   cd plexrequests-meteor
 else
+  echo "Updating repository"
   cd plexrequests-meteor
   git pull
 fi
 
 if [ "$EDGE" = "1" ]; then
-  echo "Switching to dev branch"
+  echo "Bleeding edge requested! Switching to dev branch"
   git checkout dev
 fi
 
