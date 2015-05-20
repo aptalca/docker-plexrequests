@@ -15,6 +15,9 @@ fi
 if [ "$EDGE" = "1" ]; then
   echo "Bleeding edge requested! Switching to dev branch"
   git checkout dev
+else
+  echo "Staying on master/stable branch"
+  git checkout -f master
 fi
 
 chown -R nobody:users /config
