@@ -1,10 +1,12 @@
-#Plex Requests for unRaid:
+#Plex Requests 
+
+## On unRaid:
 
 On unRaid, install from the Community Repositories and enter the app folder location and the port for the webUI.
 
 For setup instructions, please visit https://github.com/lokenx/plexrequests-meteor
 
-##Other Platforms:
+##On Other Platforms (like Synology 5.2 DSM):
 
 On other platforms, you can run this docker with the following command (by default installs the stable master):
 
