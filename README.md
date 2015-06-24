@@ -11,7 +11,7 @@ For configuration instructions, please visit https://github.com/lokenx/plexreque
 On other platforms, you can run this docker with the following command (by default installs the stable master):
 
 ```
-docker run -d --name="PlexRequests" -v /path/to/config:/config:rw -v /etc/localtime:/etc/localtime:ro -e EDGE=0 -p 3000:3000 aptalca/docker-plexrequests
+docker run -d --name="PlexRequests" -v /path/to/config:/config:rw -v /etc/localtime:/etc/localtime:ro -e EDGE="0" -p 3000:3000 aptalca/docker-plexrequests
 ```
 
 ###Setup Instructions
