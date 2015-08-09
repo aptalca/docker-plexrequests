@@ -13,7 +13,7 @@ else
 fi
 
 if [ -z "$BRANCH" ]; then
-  $BRANCH="master"
+  BRANCH="master"
 fi
 
 echo "Using the $BRANCH branch"
