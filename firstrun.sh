@@ -12,15 +12,15 @@ else
   git pull
 fi
 
-if [ "$EDGE" = "1" ]; then
-  echo "Bleeding edge requested! Switching to dev branch"
-  git checkout dev
-else
-  echo "Staying on master/stable branch"
-  git checkout -f master
+if [ -z "$BRANCH" ]; then
+  $BRANCH="master"
 fi
+
+echo "Using the $BRANCH branch"
+git checkout -f $BRANCH
 
 chown -R nobody:users /config
 chmod -R g+rw /config
 
-su -c "meteor &" -s /bin/sh nobody
+/sbin/setuser nobody meteor update
+/sbin/setuser nobody meteor &
