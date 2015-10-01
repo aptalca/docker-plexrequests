@@ -18,7 +18,7 @@ usermod -u 99 nobody && \
 usermod -g 100 nobody && \
 usermod -d /home nobody && \
 chown -R nobody:users /home && \
-/sbin/setuser nobody curl https://install.meteor.com/ | /sbin/setuser nobody sh
+curl https://install.meteor.com/ | sh
 
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
 
