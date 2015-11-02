@@ -9,6 +9,7 @@ if [ ! -d "/config/plexrequests-meteor" ]; then
 else
   echo "Updating repository"
   cd plexrequests-meteor
+  git reset --hard
   git pull
 fi
 
